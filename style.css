@@ -1,0 +1,134 @@
+body{
+    font-family: serif;
+}
+hr{
+    margin: 0%;
+}
+.index{
+    font-size: 30px;
+}
+
+.name{
+    display: flex;
+}
+.name h1{
+    width: 50vw; 
+    padding-left: 25px;
+}
+.name h2{
+    text-align: right; 
+    width: 50vw; 
+    padding: 10px 25px 10px 0px;
+}
+
+.menu{
+    background-color: black; 
+}
+.menu ul{
+    display: flex; 
+    list-style: none; 
+    flex-wrap: nowrap; 
+    margin: 0%;
+}
+.menu ul li{
+    font-size: 20px;
+}
+.menu ul a{
+    text-decoration: none; 
+    color: aliceblue; 
+    width: 100%;
+    text-align: center;
+    padding: 20px 0px;
+}
+.menu ul a:hover{
+    background-color:rgb(143 143 143 / 50%);
+}
+
+.school_img{
+    display: flex;
+}
+.school_img img{
+    width: 40vw;
+    margin: 0 4vw;
+    border-radius: 24px;
+}
+.school ul li{
+    font-size: 20px;
+}
+
+.like_animation_img{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.like_animation_img img{
+    width: 20vw; 
+    box-shadow: 10px 10px 10px -5px rgba(0.3,0.7,0.4,0.8);
+    border-radius: 24px;
+}
+.like_animation_img p{
+    text-align: center;
+    font-size: 20px;
+    color: black;
+}
+.like_animation_img a{
+    text-decoration: none;
+    margin: 0 6vw;
+    margin-top: 4vw;
+}
+.like_animation_img img:hover{
+    box-shadow: none;
+    transform: translate(2px,2px);
+}
+
+.like_singer_img{
+    display: flex;
+}
+.like_singer_img img{
+    width: 20vw; 
+    box-shadow: 10px 10px 10px -5px rgba(0.3,0.7,0.4,0.8);
+    border-radius: 24px;
+}
+.like_singer_img p{
+    text-align: center;
+    font-size: 20px;
+    color: black;
+}
+.like_singer_img a{
+    margin: 0 6.3vw;
+    text-decoration: none;
+}
+.like_singer_img img:hover{
+    box-shadow: none;
+    transform: translate(2px,2px);
+}
+
+.qualification table{
+    font-size: 20px;
+    table-layout: fixed;
+    border-collapse:collapse;
+}
+.qualification table th{
+    width: 50vw;
+    padding: 10px;
+}
+.qualification table td{
+    width: 50vw;
+    padding: 10px;
+}
+
+.works ul li{
+    font-size: 20px;
+    padding: 20px;
+    margin-top: 20px;
+}
+.works ul iframe{
+    width: 80vw;
+    height: 80vh;
+    margin-left: 10vw;
+}
+
+.top-button{
+    text-decoration: none; 
+    color: blue;
+}
