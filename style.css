@@ -40,6 +40,7 @@ hr{
     width: 100%;
     text-align: center;
     padding: 20px 0px;
+    transition: 0.5s;
 }
 .menu ul a:hover{
     background-color:rgb(143 143 143 / 50%);
@@ -127,9 +128,34 @@ hr{
     width: 80vw;
     height: 80vh;
     margin-left: 10vw;
+    border-radius: 24px;
 }
 
-.top-button{
-    text-decoration: none; 
-    color: blue;
+.top-button button{
+    display: block;
+    position: fixed;
+    bottom: 1vw;
+    left: 1vw;
+    border-radius: 20px;
+    width: 60px;
+    height: 60px;
+    background-color: black;
+    opacity: 0.5;
+}
+.top-button button::after{
+    content: '';
+    border: 0;
+    border-top: solid 3px #fff;
+    border-right: solid 3px #fff;
+    border-radius: 3px;
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    top: 55%;
+    left: 35%;
+    transform: translateY(-50%) rotate(-45deg);
+}
+.top-button button:hover{
+    opacity: 1;
 }
