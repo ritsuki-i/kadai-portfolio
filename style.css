@@ -119,12 +119,12 @@ hr{
     padding: 10px;
 }
 
-.works ul li{
+.works .swiper-container .swiper-wrapper .swiper-slide a{
     font-size: 20px;
     padding: 20px;
     margin-top: 20px;
 }
-.works ul iframe{
+.works .swiper-container .swiper-wrapper .swiper-slide iframe{
     width: 80vw;
     height: 80vh;
     margin-left: 10vw;
@@ -141,6 +141,7 @@ hr{
     height: 60px;
     background-color: black;
     opacity: 0.5;
+    z-index: 100;
 }
 .top-button button::after{
     content: '';
