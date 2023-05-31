@@ -25,14 +25,14 @@
             <a href="#school">
                 <li>出身学校</li>
             </a>
-            <a href="#qualification">
-                <li>所持資格</li>
-            </a>
             <a href="#animation">
                 <li>好きなアニメ</li>
             </a>
             <a href="#singer">
                 <li>好きな歌手</li>
+            </a>
+            <a href="#qualification">
+                <li>所持資格</li>
             </a>
             <a href="#works">
                 <li>制作物</li>
@@ -40,7 +40,7 @@
         </ul>
     </div>
     <hr>
-    <div class="school">
+    <div class="school_before">
         <h2 id="school" class="index">出身学校</h2>
         <ul>
             <li>中学校、高校&nbsp;→&nbsp;<a href="https://www.pen-kanagawa.ed.jp/hiratsuka-chuto-ss/"
@@ -53,7 +53,7 @@
         </div>
     </div>
 
-    <div class="like_animation">
+    <div class="like_animation_before">
         <h2 id="animation" class="index">好きなアニメ</h2>
         <div class="like_animation_img">
             <a href="https://ao-buta.com/" target="_blank" rel="noopener noreferrer"><img
@@ -83,7 +83,7 @@
         </div>
     </div>
 
-    <div class="lile_singer">
+    <div class="like_singer_before">
         <h2 id="singer" class="index">好きな歌手</h2>
         <div class="like_singer_img">
             <a href="https://zula.lnk.to/CE4TyiZL" target="_blank" rel="noopener noreferrer"><img
@@ -101,9 +101,9 @@
         </div>
     </div>
 
-    <div class="qualification">
+    <div class="qualification_before">
         <h2 id="qualification" class="index">所持資格</h2>
-        <table border=”1″>
+        <table border="3">
             <tr>
                 <th>所持資格</th>
                 <th>詳細</th>
@@ -137,10 +137,28 @@
                     </blockquote>
                 </td>
             </tr>
+            <tr>
+                <td>日本化粧品検定3級</td>
+                <td>
+                    <blockquote>
+                        日本化粧品検定は美容関係者をはじめ生涯学習を目的とする一般の方々や学生など、
+                        幅広い年齢層の方を対象に、化粧品・美容に関する知識の普及と向上をめざした検定です。
+                    </blockquote>
+                </td>
+            </tr>
+            <tr>
+                <td>フライドポテト・アンバサダー検定（シルバー）</td>
+                <td>
+                    <blockquote>
+                        フライドポテトに関する総合的な知識を測る、日本で唯一の検定試験です。年齢、性別、学歴などに関係なく、誰でも受験できます。
+                        合格者は、各級に応じた認定名刺を発行することができ、フライドポテトの魅力を伝える「フライドポテト・アンバサダー」として活動できます。
+                    </blockquote>
+                </td>
+            </tr>
         </table>
     </div>
 
-    <div class="works">
+    <div class="works_before">
         <h2 id="works" class="index">制作物</h2>
         <div class="swiper-container">
             <div class="swiper-wrapper">
@@ -165,7 +183,7 @@
             <div class="swiper-button-next"></div>
         </div>
     </div>
-    <a href="#top" class="top-button"><button></button></a>
+    <a class="top-button"><button></button></a>
 
     <script src="./dist/js/swiper.js"></script>
     <script>
@@ -186,6 +204,54 @@
             },
             effect: "slider",
             speed: 1500,
+        });
+    </script>
+    <script>
+        const pagetop_btn = document.querySelector(".top-button");
+
+        pagetop_btn.addEventListener("click", function(){
+            window.scroll({ top: 0, behavior: "smooth" });
+        });
+    </script>
+    <script>
+        const FADEIN_SCHOOL = document.querySelector(".school_before");
+        const FADEIN_ANIMATION = document.querySelector(".like_animation_before");
+        const FADEIN_SINGER = document.querySelector(".like_singer_before");
+        const FADEIN_QUALIFICATION = document.querySelector(".qualification_before");
+        const FADEIN_WORKS = document.querySelector(".works_before");
+        window.addEventListener('scroll', () => {
+            const FADEIN_SCHOOL_TOP = FADEIN_SCHOOL.getBoundingClientRect().top;
+            const FADEIN_ANIMATION_TOP = FADEIN_ANIMATION.getBoundingClientRect().top;
+            const FADEIN_SINGER_TOP = FADEIN_SINGER.getBoundingClientRect().top;
+            const FADEIN_QUALIFICATION_TOP = FADEIN_QUALIFICATION.getBoundingClientRect().top;
+            const FADEIN_WORKS_TOP = FADEIN_WORKS.getBoundingClientRect().top;
+            const WINDOW_HEIGHT = window.innerHeight;
+    
+            if (WINDOW_HEIGHT > (FADEIN_SCHOOL_TOP + 200)) {
+                FADEIN_SCHOOL.classList.add('school_after');
+            }else{
+                FADEIN_SCHOOL.classList.remove('school_after');
+            }
+            if (WINDOW_HEIGHT > (FADEIN_ANIMATION_TOP + 200)) {
+                FADEIN_ANIMATION.classList.add('like_animation_after');
+            }else{
+                FADEIN_ANIMATION.classList.remove('like_animation_after');
+            }
+            if (WINDOW_HEIGHT > (FADEIN_SINGER_TOP + 200)) {
+                FADEIN_SINGER.classList.add('like_singer_after');
+            }else{
+                FADEIN_SINGER.classList.remove('like_singer_after');
+            }
+            if (WINDOW_HEIGHT > (FADEIN_QUALIFICATION_TOP + 200)) {
+                FADEIN_QUALIFICATION.classList.add('qualification_after');
+            }else{
+                FADEIN_QUALIFICATION.classList.remove('qualification_after');
+            }
+            if (WINDOW_HEIGHT > (FADEIN_WORKS_TOP + 200)) {
+                FADEIN_WORKS.classList.add('works_after');
+            }else{
+                FADEIN_WORKS.classList.remove('works_after');
+            }
         });
     </script>
 </body>
