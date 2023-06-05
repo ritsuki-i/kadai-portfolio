@@ -216,3 +216,77 @@ hr{
 .top-button button:hover{
     opacity: 1;
 }
+
+@media screen and (max-width: 959px){
+    /* 959px以下に適用されるCSS（タブレット用） */
+    .index{
+        font-size: 25px;
+    }
+    .menu ul li{
+        font-size: 15px;
+    }
+    .like_animation_img img{
+        width: 30vw; 
+        box-shadow: 10px 10px 10px -5px rgba(0.3,0.7,0.4,0.8);
+        border-radius: 24px;
+    }
+    .like_animation_img p{
+        text-align: center;
+        font-size: 15px;
+        color: black;
+    }
+    .like_animation_img a{
+        text-decoration: none;
+        margin: 0 6vw;
+        margin-top: 4vw;
+    }
+}
+@media screen and (max-width: 480px) {
+	/* 480px以下に適用されるCSS（スマホ用） */
+    .index{
+        font-size: 20px;
+    }
+    .name{
+        background-color: black;
+    }
+    .name h1{
+        font-size: 8vw;
+        color: #fff;
+    }
+    .name h2{
+        color: #fff;
+        margin-top: 24vw;
+        font-size: 4vw;
+    }
+    .menu{
+        display: none;
+    }
+    .school_after ul li{
+        font-size: 15px;
+    }
+    .like_animation_img img{
+        width: 40vw; 
+    }
+    .like_animation_img p{
+        font-size: 12px;
+    }
+    .like_animation_img a{
+        margin: 0 2vw;
+    }
+    .like_singer_img p{
+        font-size:15px;
+    }
+    .qualification_after table{
+        font-size: 15px;
+        width: 90vw;
+    }
+    .qualification_after .detail{
+        display: none;
+    }
+    .swiper-container .swiper-wrapper .swiper-slide iframe{
+        width: 90vw;
+        height: 80vh;
+        margin-left: 0vw;
+        border-radius: 24px;
+    }
+}
