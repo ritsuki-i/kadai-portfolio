@@ -44,7 +44,7 @@ hr {
 }
 
 .hamburger {
-    background-color: transparent;
+    background-color: #0000001b;
     border-color: transparent;
     z-index: 9999;
 }
@@ -127,7 +127,7 @@ hr {
 
 .fadein-before {
     opacity: 0;
-    transform: translateX(-100px);
+    transform: translateX(-10px);
     transition: opacity 1s, transform 1s;
 }
 
@@ -203,7 +203,7 @@ hr {
 
 .school_before {
     opacity: 0;
-    transform: translateY(100px);
+    transform: translateY(10px);
     transition: opacity 1.5s, transform 1.5s;
 }
 
@@ -229,7 +229,7 @@ hr {
 
 .like_animation_before {
     opacity: 0;
-    transform: translateY(100px);
+    transform: translateY(10px);
     transition: opacity 1.5s, transform 1.5s;
 }
 
@@ -269,7 +269,7 @@ hr {
 
 .like_singer_before {
     opacity: 0;
-    transform: translateY(100px);
+    transform: translateY(10px);
     transition: opacity 1.5s, transform 1.5s;
 }
 
@@ -306,7 +306,7 @@ hr {
 
 .qualification_before {
     opacity: 0;
-    transform: translateY(100px);
+    transform: translateY(10px);
     transition: opacity 1.5s, transform 1.5s;
 }
 
@@ -334,7 +334,7 @@ hr {
 
 .qualification_responsive_before {
     opacity: 0;
-    transform: translateY(100px);
+    transform: translateY(10px);
     transition: opacity 1.5s, transform 1.5s;
 }
 
@@ -363,7 +363,7 @@ hr {
 
 .works_before {
     opacity: 0;
-    transform: translateY(50px);
+    transform: translateY(10px);
     transition: opacity 1.5s, transform 1.5s;
 }
 
