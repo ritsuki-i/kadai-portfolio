@@ -1,193 +1,391 @@
-body{
+body {
     font-family: serif;
-}
-hr{
-    margin: 0%;
-}
-.index{
-    font-size: 30px;
-}
-.fadein-before{
-    opacity: 0;
-    transform:translateX(-100px);
-    transition:opacity 1s,transform 1s;
+    margin: 0;
 }
 
-.fadein-after{
+hr {
+    margin: 0%;
+}
+
+.index {
+    font-size: 30px;
+    margin-top: 80px;
+    margin-left: 20px;
+}
+
+.footer{
+    height: 90px;
+    margin-top: 50px;
+    background: black;
+    text-align: center;
+}
+#copyright{
+    font-size: 15px;
+    color: #fff;
+    padding-top: 25px;
+}
+
+/* ハンバーガーメニュー */
+.header__hamburger {
+    width: 48px;
+    height: 48px;
+    position: fixed;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+#js-nav ul li{
+    list-style: none;
+}
+#js-nav ul li a{
+    text-decoration: none;
+}
+#js-nav ul li a:hover {
+    color: #666666;
+}
+
+.hamburger {
+    background-color: transparent;
+    border-color: transparent;
+    z-index: 9999;
+}
+
+.hamburger span {
+    width: 100%;
+    height: 3px;
+    background-color: #1fd100;
+    position: relative;
+    transition: ease .4s;
+    display: block;
+}
+
+.hamburger span:nth-child(1) {
+    top: 0;
+}
+
+.hamburger span:nth-child(2) {
+    margin: 8px 0;
+}
+
+.hamburger span:nth-child(3) {
+    top: 0;
+}
+
+
+/* ハンバーガーメニュークリック後のスタイル */
+.header__nav {
+    z-index: 10000;
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    transform: translateX(100%);
+    background-color: #0000008b;
+    transition: ease .4s;
+}
+.nav-items {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 0;
+}
+.nav-items__item a {
+    color: rgb(255, 255, 255);
+    width: 100%;
+    display: block;
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 24px;
+}
+
+.nav-items__item:last-child a {
+    margin-bottom: 0;
+}
+.header__nav.active {
+    transform: translateX(0);
+}
+
+.hamburger.active span:nth-child(1) {
+    top: 8px;
+    transform: rotate(45deg);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+
+}
+
+.hamburger.active span:nth-child(3) {
+    top: -13px;
+    transform: rotate(-45deg);
+}
+#js-hamburger{
+    z-index: 11000;
+}
+
+.fadein-before {
+    opacity: 0;
+    transform: translateX(-100px);
+    transition: opacity 1s, transform 1s;
+}
+
+.fadein-after {
     opacity: 1;
     transform: translate(0);
 }
 
-.name{
+.name {
+    height: 95vh;
     display: flex;
-}
-.name h1{
-    width: 50vw; 
-    padding-left: 25px;
-}
-.name h2{
-    text-align: right; 
-    width: 50vw; 
-    padding: 10px 25px 10px 0px;
+    background-image: url(./kadai_images/back.jpg);
+    background-position: bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
-.menu{
-    background-color: black; 
+.name h1 {
+    color: rgb(0, 183, 255);
+    opacity: 0;
+    font-size: 80px;
+    margin: 40vh 0;
+    width: 100vw;
+    height: 80vh;
+    text-align: center;
+    animation-name: fadein;
+    animation-fill-mode: forwards;
+    animation-duration: 3s;
 }
-.menu ul{
-    display: flex; 
-    list-style: none; 
-    flex-wrap: nowrap; 
+
+#my-name.active{
+    display: none;
+}
+
+@keyframes fadein {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.menu {
+    background-color: black;
+}
+
+.menu ul {
+    display: flex;
+    list-style: none;
+    flex-wrap: nowrap;
     margin: 0%;
     padding: 0%;
 }
-.menu ul li{
+
+.menu ul li {
     font-size: 20px;
 }
-.menu ul a{
-    text-decoration: none; 
-    color: aliceblue; 
+
+.menu ul a {
+    text-decoration: none;
+    color: aliceblue;
     width: 100%;
     text-align: center;
     padding: 20px 0px;
     transition: 0.5s;
 }
-.menu ul a:hover{
-    background-color:rgb(143 143 143 / 50%);
+
+.menu ul a:hover {
+    background-color: rgb(143 143 143 / 50%);
 }
 
-.school_before{
+.school_before {
     opacity: 0;
-    transform:translateY(100px);
-    transition:opacity 1.5s,transform 1.5s;
+    transform: translateY(100px);
+    transition: opacity 1.5s, transform 1.5s;
 }
-.school_after{
+
+.school_after {
     opacity: 1;
     transform: translate(0);
 }
-.school_img{
+
+.school_img {
     display: flex;
 }
-.school_img img{
+
+.school_img img {
     width: 40vw;
     margin: 0 4vw;
     border-radius: 24px;
 }
-.school_after ul li{
+
+.school_after ul li {
     font-size: 20px;
 }
 
 
-.like_animation_before{
+.like_animation_before {
     opacity: 0;
-    transform:translateY(100px);
-    transition:opacity 1.5s,transform 1.5s;
+    transform: translateY(100px);
+    transition: opacity 1.5s, transform 1.5s;
 }
-.like_animation_after{
+
+.like_animation_after {
     opacity: 1;
     transform: translate(0);
 }
-.like_animation_img{
+
+.like_animation_img {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
 }
-.like_animation_img img{
-    width: 20vw; 
-    box-shadow: 10px 10px 10px -5px rgba(0.3,0.7,0.4,0.8);
+
+.like_animation_img img {
+    width: 20vw;
+    box-shadow: 10px 10px 10px -5px rgba(0.3, 0.7, 0.4, 0.8);
     border-radius: 24px;
 }
-.like_animation_img p{
+
+.like_animation_img p {
     text-align: center;
     font-size: 20px;
     color: black;
 }
-.like_animation_img a{
+
+.like_animation_img a {
     text-decoration: none;
     margin: 0 6vw;
     margin-top: 4vw;
 }
-.like_animation_img img:hover{
+
+.like_animation_img img:hover {
     box-shadow: none;
-    transform: translate(2px,2px);
+    transform: translate(2px, 2px);
 }
 
-.like_singer_before{
+.like_singer_before {
     opacity: 0;
-    transform:translateY(100px);
-    transition:opacity 1.5s,transform 1.5s;
+    transform: translateY(100px);
+    transition: opacity 1.5s, transform 1.5s;
 }
-.like_singer_after{
+
+.like_singer_after {
     opacity: 1;
     transform: translate(0);
 }
-.like_singer_img{
+
+.like_singer_img {
     display: flex;
 }
-.like_singer_img img{
-    width: 20vw; 
-    box-shadow: 10px 10px 10px -5px rgba(0.3,0.7,0.4,0.8);
+
+.like_singer_img img {
+    width: 20vw;
+    box-shadow: 10px 10px 10px -5px rgba(0.3, 0.7, 0.4, 0.8);
     border-radius: 24px;
 }
-.like_singer_img p{
+
+.like_singer_img p {
     text-align: center;
     font-size: 20px;
     color: black;
 }
-.like_singer_img a{
+
+.like_singer_img a {
     margin: 0 6.3vw;
     text-decoration: none;
 }
-.like_singer_img img:hover{
+
+.like_singer_img img:hover {
     box-shadow: none;
-    transform: translate(2px,2px);
+    transform: translate(2px, 2px);
 }
 
-.qualification_before{
+.qualification_before {
     opacity: 0;
-    transform:translateY(100px);
-    transition:opacity 1.5s,transform 1.5s;
+    transform: translateY(100px);
+    transition: opacity 1.5s, transform 1.5s;
 }
-.qualification_after{
+
+.qualification_after {
     opacity: 1;
     transform: translate(0);
 }
-.qualification_after table{
+
+.qualification_after table {
     font-size: 20px;
     table-layout: fixed;
-    border-collapse:collapse;
+    border-collapse: collapse;
+    margin-left: 4vw;
 }
-.qualification_after table th{
-    width: 50vw;
-    padding: 10px;
-}
-.qualification_after table td{
-    width: 50vw;
+
+.qualification_after table th {
+    width: 45vw;
     padding: 10px;
 }
 
-.works_before{
-    opacity: 0;
-    transform:translateY(100px);
-    transition:opacity 1.5s,transform 1.5s;
+.qualification_after table td {
+    width: 45vw;
+    padding: 10px;
 }
-.works_after{
+
+.qualification_responsive_before {
+    opacity: 0;
+    transform: translateY(100px);
+    transition: opacity 1.5s, transform 1.5s;
+}
+
+.qualification_responsive_after {
     opacity: 1;
     transform: translate(0);
 }
-.swiper-container .swiper-wrapper .swiper-slide a{
+
+.qualification_responsive_after table {
+    font-size: 20px;
+    text-align: center;
+    table-layout: fixed;
+    border-collapse: collapse;
+    margin-left: 1.5vw;
+}
+
+.qualification_responsive_after table th {
+    width: 45vw;
+    padding: 10px;
+}
+
+.qualification_responsive_after table td {
+    width: 90vw;
+    padding: 10px;
+}
+
+.works_before {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1.5s, transform 1.5s;
+}
+
+.works_after {
+    opacity: 1;
+    transform: translate(0);
+}
+
+.swiper-container .swiper-wrapper .swiper-slide a {
     font-size: 20px;
     padding: 20px;
     margin-top: 20px;
 }
-.swiper-container .swiper-wrapper .swiper-slide iframe{
+
+.swiper-container .swiper-wrapper .swiper-slide iframe {
     width: 80vw;
     height: 80vh;
     margin-left: 10vw;
     border-radius: 24px;
 }
 
-.top-button button{
+.top-button button {
     display: block;
     position: fixed;
     bottom: 1vw;
@@ -199,7 +397,8 @@ hr{
     opacity: 0.5;
     z-index: 100;
 }
-.top-button button::after{
+
+.top-button button::after {
     content: '';
     border: 0;
     border-top: solid 3px #fff;
@@ -213,80 +412,111 @@ hr{
     left: 35%;
     transform: translateY(-50%) rotate(-45deg);
 }
-.top-button button:hover{
+
+.top-button button:hover {
     opacity: 1;
 }
 
-@media screen and (max-width: 959px){
+@media screen and (min-width: 480px) {
+    .qualification_responsive_after table {
+        display: none;
+    }
+    .hamburger {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 959px) {
+
     /* 959px以下に適用されるCSS（タブレット用） */
-    .index{
+    .index {
         font-size: 25px;
     }
-    .menu ul li{
+
+    .menu ul li {
         font-size: 15px;
     }
-    .like_animation_img img{
-        width: 30vw; 
-        box-shadow: 10px 10px 10px -5px rgba(0.3,0.7,0.4,0.8);
+
+    .like_animation_img img {
+        width: 30vw;
+        box-shadow: 10px 10px 10px -5px rgba(0.3, 0.7, 0.4, 0.8);
         border-radius: 24px;
     }
-    .like_animation_img p{
+
+    .like_animation_img p {
         text-align: center;
         font-size: 15px;
         color: black;
     }
-    .like_animation_img a{
+
+    .like_animation_img a {
         text-decoration: none;
         margin: 0 6vw;
         margin-top: 4vw;
     }
+
 }
+
 @media screen and (max-width: 480px) {
-	/* 480px以下に適用されるCSS（スマホ用） */
-    .index{
+
+    /* 480px以下に適用されるCSS（スマホ用） */
+    .index {
         font-size: 20px;
     }
-    .name{
-        background-color: black;
+
+    .name {
+        height: 100vh;
     }
-    .name h1{
+
+    .name h1 {
         font-size: 8vw;
-        color: #fff;
     }
-    .name h2{
-        color: #fff;
-        margin-top: 24vw;
-        font-size: 4vw;
-    }
-    .menu{
+
+    hr {
         display: none;
     }
-    .school_after ul li{
+
+    .menu {
+        display: none;
+    }
+
+    .school_after ul li {
         font-size: 15px;
     }
-    .like_animation_img img{
-        width: 40vw; 
+
+    .like_animation_img img {
+        width: 40vw;
     }
-    .like_animation_img p{
+
+    .like_animation_img p {
         font-size: 12px;
     }
-    .like_animation_img a{
+
+    .like_animation_img a {
         margin: 0 2vw;
     }
-    .like_singer_img p{
-        font-size:15px;
-    }
-    .qualification_after table{
+
+    .like_singer_img p {
         font-size: 15px;
-        width: 90vw;
     }
-    .qualification_after .detail{
+
+    .qualification_after table {
         display: none;
     }
-    .swiper-container .swiper-wrapper .swiper-slide iframe{
+
+    .qualification_responsive_after table .detail-hidden {
+        display: none;
+    }
+
+    .qualification-responsive-name:active {
+        
+        background-color: #00000036;
+    }
+
+    .swiper-container .swiper-wrapper .swiper-slide iframe {
         width: 90vw;
         height: 80vh;
-        margin-left: 0vw;
+        margin-left: 5vw;
         border-radius: 24px;
     }
 }

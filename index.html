@@ -12,34 +12,50 @@
 </head>
 
 <body>
-    <div class="name">
-        <h1>MY WEB SITE</h1>
-        <h2>15822010 石川 立騎</h2>
+    <div class="header">
+        <hr>
+        <nav class="header__nav nav" id="js-nav">
+            <ul class="nav__items nav-items">
+                <li class="nav-items__item"><a class="top-menu">ホーム</a></li>
+                <li class="nav-items__item"><a href="#school">出身学校</a></li>
+                <li class="nav-items__item"><a href="#animation">好きなアニメ</a></li>
+                <li class="nav-items__item"><a href="#singer">好きな歌手</a></li>
+                <li class="nav-items__item"><a href="#qualification">所持資格</a></li>
+                <li class="nav-items__item"><a href="#works">制作物</a></li>
+            </ul>
+        </nav>
+        <div class="menu">
+            <ul>
+                <a class="top-menu">
+                    <li>ホーム</li>
+                </a>
+                <a href="#school">
+                    <li>出身学校</li>
+                </a>
+                <a href="#animation">
+                    <li>好きなアニメ</li>
+                </a>
+                <a href="#singer">
+                    <li>好きな歌手</li>
+                </a>
+                <a href="#qualification">
+                    <li>所持資格</li>
+                </a>
+                <a href="#works">
+                    <li>制作物</li>
+                </a>
+            </ul>
+        </div>
+        <hr>
+        <div class="name">
+            <button class="header__hamburger hamburger" id="js-hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <h1 id="my-name">Ritsuki Ishikawa</h1>
+        </div>
     </div>
-    <hr>
-    <div class="menu">
-        <ul>
-            <a href="#home">
-                <li>ホーム</li>
-            </a>
-            <a href="#school">
-                <li>出身学校</li>
-            </a>
-            <a href="#animation">
-                <li>好きなアニメ</li>
-            </a>
-            <a href="#singer">
-                <li>好きな歌手</li>
-            </a>
-            <a href="#qualification">
-                <li>所持資格</li>
-            </a>
-            <a href="#works">
-                <li>制作物</li>
-            </a>
-        </ul>
-    </div>
-    <hr>
     <div class="school_before">
         <h2 id="school" class="index">出身学校</h2>
         <ul>
@@ -109,7 +125,7 @@
                 <th class="detail">詳細</th>
             </tr>
             <tr>
-                <td>ITパスポート</td>
+                <td class="qualification-name">ITパスポート</td>
                 <td class="detail">
                     <blockquote>
                         ITパスポートは、ITを利活用するすべての社会人・これから社会人となる学生が備えておくべきITに関する基礎的な知識が証明できる国家試験です。
@@ -119,7 +135,7 @@
                 </td>
             </tr>
             <tr>
-                <td>基本情報技術者</td>
+                <td class="qualification-name">基本情報技術者</td>
                 <td class="detail">
                     <blockquote>
                         基本情報技術者試験は、情報処理の促進に関する法律第29条第1項に基づき経済産業大臣が行う国家試験である情報処理技術者試験の一区分。対象者像は「高度 IT
@@ -129,7 +145,7 @@
                 </td>
             </tr>
             <tr>
-                <td>G検定</td>
+                <td class="qualification-name">G検定</td>
                 <td class="detail">
                     <blockquote>
                         JDLA Deep Learning for GENERALは、一般社団法人日本ディープラーニング協会が実施するAIに関する検定試験および民間資格である。
@@ -138,7 +154,7 @@
                 </td>
             </tr>
             <tr>
-                <td>日本化粧品検定3級</td>
+                <td class="qualification-name">日本化粧品検定3級</td>
                 <td class="detail">
                     <blockquote>
                         日本化粧品検定は美容関係者をはじめ生涯学習を目的とする一般の方々や学生など、
@@ -147,8 +163,73 @@
                 </td>
             </tr>
             <tr>
-                <td>フライドポテト・アンバサダー検定（シルバー）</td>
+                <td class="qualification-name">フライドポテト・アンバサダー検定（シルバー）</td>
                 <td class="detail">
+                    <blockquote>
+                        フライドポテトに関する総合的な知識を測る、日本で唯一の検定試験です。年齢、性別、学歴などに関係なく、誰でも受験できます。
+                        合格者は、各級に応じた認定名刺を発行することができ、フライドポテトの魅力を伝える「フライドポテト・アンバサダー」として活動できます。
+                    </blockquote>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="qualification_responsive_before">
+        <table border="3">
+            <tr>
+                <th>所持資格(タップで詳細表示)</th>
+            </tr>
+            <tr class="qualification-responsive-name">
+                <td>ITパスポート</td>
+            </tr>
+            <tr class="detail-hidden">
+                <td>
+                    <blockquote>
+                        ITパスポートは、ITを利活用するすべての社会人・これから社会人となる学生が備えておくべきITに関する基礎的な知識が証明できる国家試験です。
+                        具体的には、新しい技術（AI、ビッグデータ、IoTなど）や新しい手法（アジャイルなど）の概要に関する知識をはじめ、経営全般（経営戦略、マーケティング、財務、法務など）の知識、IT（セキュリティ、ネットワークなど）の知識、プロジェクトマネジメントの知識など幅広い分野の総合的知識を問う試験です。
+                        ITを正しく理解し、業務に効果的にITを利活用することのできる“IT力”が身につきます。
+                    </blockquote>
+                </td>
+            </tr>
+            <tr class="qualification-responsive-name">
+                <td>基本情報技術者</td>
+            </tr>
+            <tr class="detail-hidden">
+                <td>
+                    <blockquote>
+                        基本情報技術者試験は、情報処理の促進に関する法律第29条第1項に基づき経済産業大臣が行う国家試験である情報処理技術者試験の一区分。対象者像は「高度 IT
+                        人材となるために必要な基本的知識・技能をもち，実践的な活用能力を身に付けた者」。
+                        情報処理技術者試験制度のスキルレベル2に相当する。
+                    </blockquote>
+                </td>
+            </tr>
+            <tr class="qualification-responsive-name">
+                <td>G検定</td>
+            </tr>
+            <tr class="detail-hidden">
+                <td>
+                    <blockquote>
+                        JDLA Deep Learning for GENERALは、一般社団法人日本ディープラーニング協会が実施するAIに関する検定試験および民間資格である。
+                        特にディープラーニングの基礎知識を有し、適切な活用方針を決定して事業応用する能力を持つ人材の輩出を目的として実施されている。
+                    </blockquote>
+                </td>
+            </tr>
+            <tr class="qualification-responsive-name">
+                <td>日本化粧品検定3級</td>
+            </tr>
+            <tr class="detail-hidden">
+                <td>
+                    <blockquote>
+                        日本化粧品検定は美容関係者をはじめ生涯学習を目的とする一般の方々や学生など、
+                        幅広い年齢層の方を対象に、化粧品・美容に関する知識の普及と向上をめざした検定です。
+                    </blockquote>
+                </td>
+            </tr>
+            <tr class="qualification-responsive-name">
+                <td>フライドポテト・アンバサダー検定（シルバー）</td>
+            </tr>
+            <tr class="detail-hidden">
+                <td>
                     <blockquote>
                         フライドポテトに関する総合的な知識を測る、日本で唯一の検定試験です。年齢、性別、学歴などに関係なく、誰でも受験できます。
                         合格者は、各級に応じた認定名刺を発行することができ、フライドポテトの魅力を伝える「フライドポテト・アンバサダー」として活動できます。
@@ -164,17 +245,19 @@
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
                     <a href="https://ritsuki-i.github.io/my-portfolio/" target="_blank" rel="noopener noreferrer"
-                    style="text-decoration: none;"><abbr title="石川立騎のポートフォリオウェブサイトです。">ポートフォリオ</abbr></a>
-                    <iframe src="https://ritsuki-i.github.io/my-portfolio/" target="_blank" rel="noreferrer noopener"></iframe>
+                        style="text-decoration: none;"><abbr title="石川立騎のポートフォリオウェブサイトです。">ポートフォリオ</abbr></a>
+                    <iframe src="https://ritsuki-i.github.io/my-portfolio/" target="_blank"
+                        rel="noreferrer noopener"></iframe>
                 </div>
                 <div class="swiper-slide">
                     <a href="https://ritsuki-i.github.io/unitygame/" target="_blank" rel="noopener noreferrer"
-                    style="text-decoration: none;"><abbr title="Unityで作られたweb2Dアクションゲームです">魔女見習いまじか❤マジカ</abbr></a>
-                    <iframe src="https://ritsuki-i.github.io/unitygame/" target="_blank" rel="noreferrer noopener"></iframe>
+                        style="text-decoration: none;"><abbr title="Unityで作られたweb2Dアクションゲームです">魔女見習いまじか❤マジカ</abbr></a>
+                    <iframe src="https://ritsuki-i.github.io/unitygame/" target="_blank"
+                        rel="noreferrer noopener"></iframe>
                 </div>
                 <div class="swiper-slide">
                     <a href="https://cw.pythonanywhere.com/" target="_blank" rel="noopener noreferrer"
-                    style="text-decoration: none;"><abbr title="欲しい栄養素をとれるレシピがわかるWebアプリケーション">COOK_WITH</abbr></a>
+                        style="text-decoration: none;"><abbr title="欲しい栄養素をとれるレシピがわかるWebアプリケーション">COOK_WITH</abbr></a>
                     <iframe src="https://cw.pythonanywhere.com/" target="_blank" rel="noreferrer noopener"></iframe>
                 </div>
             </div>
@@ -183,77 +266,19 @@
             <div class="swiper-button-next"></div>
         </div>
     </div>
+    <div class="footer">
+        <p id="copyright">© 2023 Ritsuki Ishikawa</p>
+    </div>
+
     <a class="top-button"><button></button></a>
 
     <script src="./dist/js/swiper.js"></script>
-    <script>
-        var swiper = new Swiper('.swiper-container', {
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-            pagination: {
-                el: '.swiper-pagination',
-                type: 'bullets',
-                clickable: true,
-            },
-            loop: true,
-            autoplay: {
-                delay: 5000,
-                disableOnInteraction: true
-            },
-            effect: "slider",
-            speed: 1500,
-        });
-    </script>
-    <script>
-        const pagetop_btn = document.querySelector(".top-button");
-
-        pagetop_btn.addEventListener("click", function(){
-            window.scroll({ top: 0, behavior: "smooth" });
-        });
-    </script>
-    <script>
-        const FADEIN_SCHOOL = document.querySelector(".school_before");
-        const FADEIN_ANIMATION = document.querySelector(".like_animation_before");
-        const FADEIN_SINGER = document.querySelector(".like_singer_before");
-        const FADEIN_QUALIFICATION = document.querySelector(".qualification_before");
-        const FADEIN_WORKS = document.querySelector(".works_before");
-        window.addEventListener('scroll', () => {
-            const FADEIN_SCHOOL_TOP = FADEIN_SCHOOL.getBoundingClientRect().top;
-            const FADEIN_ANIMATION_TOP = FADEIN_ANIMATION.getBoundingClientRect().top;
-            const FADEIN_SINGER_TOP = FADEIN_SINGER.getBoundingClientRect().top;
-            const FADEIN_QUALIFICATION_TOP = FADEIN_QUALIFICATION.getBoundingClientRect().top;
-            const FADEIN_WORKS_TOP = FADEIN_WORKS.getBoundingClientRect().top;
-            const WINDOW_HEIGHT = window.innerHeight;
+    <script src="./fade-in.js"></script>
+    <script src="./smooth.js"></script>
+    <script src="./detail.js"></script>
+    <script src="./hambergermenu.js"></script>
     
-            if (WINDOW_HEIGHT > (FADEIN_SCHOOL_TOP + 200)) {
-                FADEIN_SCHOOL.classList.add('school_after');
-            }else{
-                FADEIN_SCHOOL.classList.remove('school_after');
-            }
-            if (WINDOW_HEIGHT > (FADEIN_ANIMATION_TOP + 200)) {
-                FADEIN_ANIMATION.classList.add('like_animation_after');
-            }else{
-                FADEIN_ANIMATION.classList.remove('like_animation_after');
-            }
-            if (WINDOW_HEIGHT > (FADEIN_SINGER_TOP + 200)) {
-                FADEIN_SINGER.classList.add('like_singer_after');
-            }else{
-                FADEIN_SINGER.classList.remove('like_singer_after');
-            }
-            if (WINDOW_HEIGHT > (FADEIN_QUALIFICATION_TOP + 200)) {
-                FADEIN_QUALIFICATION.classList.add('qualification_after');
-            }else{
-                FADEIN_QUALIFICATION.classList.remove('qualification_after');
-            }
-            if (WINDOW_HEIGHT > (FADEIN_WORKS_TOP + 200)) {
-                FADEIN_WORKS.classList.add('works_after');
-            }else{
-                FADEIN_WORKS.classList.remove('works_after');
-            }
-        });
-    </script>
+    
 </body>
 
 </html>
