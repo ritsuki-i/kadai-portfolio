@@ -42,13 +42,11 @@ hr {
 #js-nav ul li a:hover {
     color: #666666;
 }
-
 .hamburger {
-    background-color: #0000001b;
+    background-color: transparent;
     border-color: transparent;
     z-index: 9999;
 }
-
 .hamburger span {
     width: 100%;
     height: 3px;
@@ -57,19 +55,15 @@ hr {
     transition: ease .4s;
     display: block;
 }
-
 .hamburger span:nth-child(1) {
     top: 0;
 }
-
 .hamburger span:nth-child(2) {
     margin: 8px 0;
 }
-
 .hamburger span:nth-child(3) {
     top: 0;
 }
-
 
 /* ハンバーガーメニュークリック後のスタイル */
 .header__nav {
@@ -127,7 +121,7 @@ hr {
 
 .fadein-before {
     opacity: 0;
-    transform: translateX(-10px);
+    transform: translateX(-100px);
     transition: opacity 1s, transform 1s;
 }
 
@@ -203,7 +197,7 @@ hr {
 
 .school_before {
     opacity: 0;
-    transform: translateY(10px);
+    transform: translateY(100px);
     transition: opacity 1.5s, transform 1.5s;
 }
 
@@ -229,7 +223,7 @@ hr {
 
 .like_animation_before {
     opacity: 0;
-    transform: translateY(10px);
+    transform: translateY(100px);
     transition: opacity 1.5s, transform 1.5s;
 }
 
@@ -269,7 +263,7 @@ hr {
 
 .like_singer_before {
     opacity: 0;
-    transform: translateY(10px);
+    transform: translateY(100px);
     transition: opacity 1.5s, transform 1.5s;
 }
 
@@ -306,7 +300,7 @@ hr {
 
 .qualification_before {
     opacity: 0;
-    transform: translateY(10px);
+    transform: translateY(100px);
     transition: opacity 1.5s, transform 1.5s;
 }
 
@@ -334,7 +328,7 @@ hr {
 
 .qualification_responsive_before {
     opacity: 0;
-    transform: translateY(10px);
+    transform: translateY(100px);
     transition: opacity 1.5s, transform 1.5s;
 }
 
@@ -363,7 +357,7 @@ hr {
 
 .works_before {
     opacity: 0;
-    transform: translateY(10px);
+    transform: translateY(50px);
     transition: opacity 1.5s, transform 1.5s;
 }
 
@@ -487,17 +481,24 @@ hr {
     .like_animation_img img {
         width: 40vw;
     }
-
     .like_animation_img p {
         font-size: 12px;
     }
-
     .like_animation_img a {
         margin: 0 2vw;
+    }
+    .like_animation_img img {
+        width: 40vw;
     }
 
     .like_singer_img p {
         font-size: 15px;
+    }
+    .like_singer_img a {
+        margin: 0 2vw;
+    }
+    .like_singer_img img {
+        width: 29vw;
     }
 
     .qualification_after table {
