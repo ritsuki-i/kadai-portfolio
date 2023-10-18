@@ -274,9 +274,12 @@ hr {
 
 .like_singer_img {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 
 .like_singer_img img {
+    margin-top: 20px;
     width: 20vw;
     box-shadow: 10px 10px 10px -5px rgba(0.3, 0.7, 0.4, 0.8);
     border-radius: 24px;
